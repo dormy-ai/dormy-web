@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dormy — Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+
+/* ════════════════════════════════════════════
+   RESET & BASE
+════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── Brand Colors ── */
+  --coral:        #E8735A;
+  --coral-light:  #F5C4B8;
+  --coral-dark:   #C85A42;
+  --coral-bg:     #FEF3EF;
+  --navy:         #1B2B4B;
+  --navy-mid:     #2E4170;
+  --navy-light:   #4A6090;
+  --cream:        #FDFCFA;
+  --cream-dark:   #F5F3EF;
+  --warm-gray:    #888580;
+  --warm-gray-light: #C4C2BE;
+  --white:        #FFFFFF;
+  --border:       #E8E6E1;
+
+  /* ── Spacing ── */
+  --radius:       8px;
+  --radius-lg:    12px;
+  --radius-xl:    16px;
+
+  /* ── Shadows ── */
+  --shadow-sm:    0 1px 3px rgba(27,43,75,0.06), 0 1px 2px rgba(27,43,75,0.04);
+  --shadow:       0 4px 16px rgba(27,43,75,0.08), 0 1px 4px rgba(27,43,75,0.05);
+  --shadow-lg:    0 12px 40px rgba(27,43,75,0.10), 0 4px 12px rgba(27,43,75,0.06);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════ */
+.topbar {
+  background: var(--navy);
+  padding: 0 48px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+.topbar-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.topbar-logo span { color: var(--coral); }
+.topbar-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.topbar-version {
+  font-size: 11px;
+  color: var(--coral-light);
+  background: rgba(232,115,90,0.15);
+  border: 1px solid rgba(232,115,90,0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #344f7a 100%);
+  padding: 80px 48px 72px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(232,115,90,0.18) 0%, transparent 70%);
+  top: -150px; right: -100px;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(232,115,90,0.08) 0%, transparent 70%);
+  bottom: -80px; left: 10%;
+  pointer-events: none;
+}
+.hero-inner { position: relative; max-width: 1100px; margin: 0 auto; }
+.hero-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero h1 em { color: var(--coral); font-style: italic; }
+.hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.55);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.hero-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.06);
+}
+
+/* ════════════════════════════════════════════
+   SIDEBAR NAV + LAYOUT
+════════════════════════════════════════════ */
+.page-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  padding: 0 48px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 80px;
+  padding: 40px 0;
+  padding-right: 32px;
+}
+.sidebar-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 12px;
+  margin-top: 24px;
+  padding-left: 12px;
+}
+.sidebar-label:first-child { margin-top: 0; }
+.sidebar a {
+  display: block;
+  font-size: 13px;
+  color: var(--warm-gray);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+.sidebar a:hover { color: var(--navy); background: var(--cream-dark); }
+.sidebar a.active { color: var(--coral); font-weight: 600; background: var(--coral-bg); }
+
+.content {
+  padding: 56px 0 120px;
+  border-left: 1px solid var(--border);
+  padding-left: 56px;
+  min-width: 0;
+}
+
+/* ════════════════════════════════════════════
+   SECTIONS
+════════════════════════════════════════════ */
+.section {
+  margin-bottom: 80px;
+  scroll-margin-top: 80px;
+}
+.section-header { margin-bottom: 32px; }
+.section-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+.section-desc {
+  font-size: 14px;
+  color: var(--warm-gray);
+  margin-top: 10px;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.divider { height: 1px; background: var(--border); margin: 72px 0; }
+
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy-light);
+  margin: 40px 0 16px;
+}
+h3:first-child { margin-top: 0; }
+
+/* ════════════════════════════════════════════
+   COLOR SYSTEM
+════════════════════════════════════════════ */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.color-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.color-swatch {
+  height: 88px;
+  width: 100%;
+  position: relative;
+}
+.color-swatch::after {
+  content: attr(data-hex);
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  font-family: 'Inter', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+}
+.color-info {
+  background: #fff;
+  padding: 12px 14px;
+}
+.color-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.color-role {
+  font-size: 11px;
+  color: var(--warm-gray);
+  line-height: 1.5;
+}
+
+.color-usage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  margin-top: 16px;
+}
+.color-usage-table th {
+  background: var(--cream-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--navy-light);
+  text-align: left;
+  padding: 11px 16px;
+}
+.color-usage-table td {
+  padding: 11px 16px;
+  border-top: 1px solid var(--border);
+  color: #555;
+  vertical-align: top;
+  line-height: 1.6;
+}
+.color-usage-table td strong { color: var(--navy); }
+.color-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════
+   LOGO SYSTEM
+════════════════════════════════════════════ */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.logo-cell {
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.logo-cell img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+.logo-cell .logo-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: inherit;
+  opacity: 0.5;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.logo-bg-cream   { background: var(--cream); color: var(--navy); }
+.logo-bg-navy    { background: var(--navy);  color: #fff; }
+.logo-bg-coral   { background: var(--coral); color: #fff; }
+.logo-bg-white   { background: #fff; color: var(--navy); border: 1px solid var(--border); }
+
+.logo-rule {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.rule-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.rule-text { font-size: 13px; color: #555; line-height: 1.6; }
+.rule-text strong { color: var(--navy); display: block; margin-bottom: 2px; }
+
+/* clearspace diagram */
+.clearspace-box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clearspace-inner {
+  position: relative;
+  display: inline-block;
+  padding: 24px;
+  border: 2px dashed var(--coral-light);
+  border-radius: 8px;
+}
+.clearspace-inner img { height: 36px; display: block; }
+.clearspace-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--coral);
+  letter-spacing: 1px;
+}
+.clearspace-label.top    { top: -18px; left: 50%; transform: translateX(-50%); }
+.clearspace-label.bottom { bottom: -18px; left: 50%; transform: translateX(-50%); }
+.clearspace-label.left   { left: -46px; top: 50%; transform: translateY(-50%); }
+.clearspace-label.right  { right: -46px; top: 50%; transform: translateY(-50%); }
+
+/* ════════════════════════════════════════════
+   TYPOGRAPHY
+════════════════════════════════════════════ */
+.font-showcase {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+.font-header {
+  background: var(--cream-dark);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.font-header-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+}
+.font-header-meta {
+  display: flex;
+  gap: 8px;
+}
+.font-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+.badge-serif { background: var(--coral-bg); color: var(--coral); }
+.badge-sans  { background: #EFF4FF; color: #3B5BDB; }
+.badge-brand { background: #F0FDF4; color: #16A34A; }
+.badge-mono  { background: #F9F0FF; color: #7C3AED; }
+
+.font-body { padding: 28px 32px; }
+
+.type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.type-row:last-child { border-bottom: none; }
+.type-meta {
+  min-width: 140px;
+  flex-shrink: 0;
+}
+.type-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 2px;
+}
+.type-spec {
+  font-size: 11px;
+  color: var(--warm-gray);
+  font-family: 'Inter', monospace;
+  line-height: 1.5;
+}
+.type-sample { flex: 1; min-width: 0; }
+
+/* ════════════════════════════════════════════
+   SPACING & LAYOUT
+════════════════════════════════════════════ */
+.spacing-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.spacing-row:last-child { border-bottom: none; }
+.spacing-bar-wrap { width: 160px; flex-shrink: 0; }
+.spacing-bar {
+  background: var(--coral);
+  height: 16px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+.spacing-info { font-size: 13px; color: #555; }
+.spacing-info code {
+  font-family: 'Inter', monospace;
+  font-size: 12px;
+  background: var(--cream-dark);
+  color: var(--coral);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.spacing-info .sp-name { font-weight: 600; color: var(--navy); }
+.spacing-info .sp-px { color: var(--warm-gray); font-size: 12px; }
+
+/* ════════════════════════════════════════════
+   COMPONENT EXAMPLES
+════════════════════════════════════════════ */
+.component-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+.component-header {
+  background: var(--cream-dark);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy-light);
+}
+.component-preview {
+  padding: 32px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.component-preview.dark { background: var(--navy); }
+.component-preview.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Buttons */
+.btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.1px;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.btn-primary   { background: var(--coral); color: #fff; }
+.btn-primary:hover { background: var(--coral-dark); }
+.btn-secondary { background: var(--navy); color: #fff; }
+.btn-secondary:hover { background: var(--navy-mid); }
+.btn-outline   { background: transparent; color: var(--navy); border: 1.5px solid var(--border); }
+.btn-outline:hover { border-color: var(--coral); color: var(--coral); }
+.btn-ghost     { background: transparent; color: var(--warm-gray); border: none; }
+.btn-ghost:hover { color: var(--navy); background: var(--cream-dark); }
+.btn-sm { padding: 7px 14px; font-size: 13px; }
+.btn-lg { padding: 14px 28px; font-size: 15px; border-radius: 10px; }
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.badge-coral { background: var(--coral-bg); color: var(--coral); border: 1px solid var(--coral-light); }
+.badge-navy  { background: rgba(27,43,75,0.08); color: var(--navy); border: 1px solid rgba(27,43,75,0.12); }
+.badge-green { background: #F0FDF4; color: #16A34A; border: 1px solid #BBF7D0; }
+.badge-amber { background: #FFFBEB; color: #D97706; border: 1px solid #FDE68A; }
+
+/* Cards */
+.example-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.example-card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.example-card-body { font-size: 13px; color: var(--warm-gray); line-height: 1.6; }
+
+/* Section label */
+.section-label-component {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--coral);
+  border: 1px solid var(--coral-light);
+  background: var(--coral-bg);
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+.section-label-component::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+/* Inputs */
+.example-input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--navy);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.example-input:focus { border-color: var(--coral); box-shadow: 0 0 0 3px rgba(232,115,90,0.12); }
+.example-input::placeholder { color: var(--warm-gray-light); }
+
+/* ════════════════════════════════════════════
+   DESIGN PRINCIPLES
+════════════════════════════════════════════ */
+.principle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.principle-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 24px;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--coral);
+}
+.principle-icon { font-size: 24px; margin-bottom: 12px; }
+.principle-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.principle-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.65; }
+
+/* ════════════════════════════════════════════
+   DO / DON'T
+════════════════════════════════════════════ */
+.do-dont-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.do-card, .dont-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.do-header, .dont-header {
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.do-header  { background: #F0FDF4; color: #16A34A; }
+.dont-header { background: #FFF1F0; color: #DC2626; }
+.do-body, .dont-body { background: #fff; padding: 16px 18px; }
+.do-body li, .dont-body li {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 6px;
+  list-style: none;
+  padding-left: 16px;
+  position: relative;
+}
+.do-body li::before   { content: '✓'; position: absolute; left: 0; color: #16A34A; font-weight: 700; }
+.dont-body li::before { content: '✗'; position: absolute; left: 0; color: #DC2626; font-weight: 700; }
+
+/* ════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════ */
+.footer {
+  background: var(--navy);
+  padding: 48px;
+  text-align: center;
+  margin-top: 80px;
+}
+.footer-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.footer-logo span { color: var(--coral); }
+.footer-text { font-size: 13px; color: rgba(255,255,255,0.35); }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .topbar, .hero { padding-left: 24px; padding-right: 24px; }
+  .page-layout { grid-template-columns: 1fr; padding: 0 24px; }
+  .sidebar { display: none; }
+  .content { border-left: none; padding-left: 0; }
+  .logo-grid, .do-dont-grid, .principle-grid { grid-template-columns: 1fr; }
+  .type-row { flex-direction: column; gap: 8px; }
+  .type-meta { min-width: unset; }
+}
+
+@media print {
+  .topbar, .sidebar { display: none; }
+  .page-layout { grid-template-columns: 1fr; }
+  .content { border-left: none; padding-left: 0; }
+  .section { page-break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<nav class="topbar">
+  <div class="topbar-logo">Dormy<span>.</span></div>
+  <div class="topbar-title">Brand Guidelines</div>
+  <div class="topbar-version">v5 · 2026</div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Dormy Brand Guidelines</div>
+    <h1>The visual language<br>of <em>editorial warmth</em></h1>
+    <p class="hero-sub">Every design decision reflects who Dormy is: a founder's partner. Confident, warm, specific. Never corporate. Never generic.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Colors</span>
+      <span class="hero-tag">Typography</span>
+      <span class="hero-tag">Logo System</span>
+      <span class="hero-tag">Spacing</span>
+      <span class="hero-tag">Components</span>
+      <span class="hero-tag">Voice</span>
+    </div>
+  </div>
+</header>
+
+<!-- Page Layout -->
+<div class="page-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-label">Brand</div>
+    <a href="#philosophy">Design Philosophy</a>
+    <a href="#logo">Logo System</a>
+
+    <div class="sidebar-label">Visuals</div>
+    <a href="#colors">Color Palette</a>
+    <a href="#typography">Typography</a>
+    <a href="#spacing">Spacing & Layout</a>
+
+    <div class="sidebar-label">UI</div>
+    <a href="#components">Components</a>
+
+    <div class="sidebar-label">Rules</div>
+    <a href="#do-dont">Do's & Don'ts</a>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- ════ DESIGN PHILOSOPHY ════ -->
+    <section class="section" id="philosophy">
+      <div class="section-header">
+        <div class="section-eyebrow">01 — Foundation</div>
+        <h2 class="section-title">Design Philosophy</h2>
+        <p class="section-desc">Dormy's visual identity is built around one idea: <strong>editorial warmth</strong>. The confidence of a premium publication. The approachability of a trusted partner.</p>
+      </div>
+
+      <div class="principle-grid">
+        <div class="principle-card">
+          <div class="principle-icon">📖</div>
+          <div class="principle-title">Editorial Warmth</div>
+          <div class="principle-desc">Inspired by high-quality editorial design. Generous whitespace, serif headings, and warm cream tones create a feeling of considered quality — not startup hustle.</div>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">🎯</div>
+          <div class="principle-title">Specific Over Generic</div>
+          <div class="principle-desc">Every visual element should feel intentional. Coral is not "red." Cream is not "white." The specificity of the palette signals that this product was designed, not assembled.</div>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">🤝</div>
+          <div class="principle-title">Partner, Not Tool</div>
+          <div class="principle-desc">The warmth of the color palette and the humanity of the serif type communicate that Dormy has a point of view — and is on the founder's side.</div>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">⚡</div>
+          <div class="principle-title">Restrained Motion</div>
+          <div class="principle-desc">Animations are subtle and purposeful. No gratuitous effects. Every transition should feel like a considered editorial choice, not a demonstration of technical capability.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ════ LOGO SYSTEM ════ -->
+    <section class="section" id="logo">
+      <div class="section-header">
+        <div class="section-eyebrow">02 — Identity</div>
+        <h2 class="section-title">Logo System</h2>
+        <p class="section-desc">Two components: the <strong>D Mark</strong> (icon) and the <strong>Wordmark</strong> (text). Each available in four background variants. Use the wordmark as the primary identifier in all product contexts.</p>
+      </div>
+
+      <h3>Wordmark — Primary Use</h3>
+      <div class="logo-grid">
+        <div class="logo-cell logo-bg-cream">
+          <img src="./v5/wordmark-transparent.svg" alt="Dormy wordmark on cream" />
+          <span class="logo-label">Cream / Default</span>
+        </div>
+        <div class="logo-cell logo-bg-navy">
+          <img src="./v5/wordmark-cream.svg" alt="Dormy wordmark on navy" />
+          <span class="logo-label">Dark / Navy</span>
+        </div>
+        <div class="logo-cell logo-bg-white">
+          <img src="./v5/wordmark-dark.svg" alt="Dormy wordmark dark" />
+          <span class="logo-label">White Background</span>
+        </div>
+        <div class="logo-cell logo-bg-coral">
+          <img src="./v5/wordmark-white.svg" alt="Dormy wordmark white on coral" />
+          <span class="logo-label">Coral Background</span>
+        </div>
+      </div>
+
+      <h3>D Mark — Icon Use</h3>
+      <div class="logo-grid">
+        <div class="logo-cell logo-bg-cream">
+          <img src="./v5/d-mark-transparent.svg" alt="D mark on cream" style="height:56px;" />
+          <span class="logo-label">Cream / Default</span>
+        </div>
+        <div class="logo-cell logo-bg-navy">
+          <img src="./v5/d-mark-cream.svg" alt="D mark cream on navy" style="height:56px;" />
+          <span class="logo-label">Dark / Navy</span>
+        </div>
+        <div class="logo-cell logo-bg-white">
+          <img src="./v5/d-mark-dark.svg" alt="D mark dark" style="height:56px;" />
+          <span class="logo-label">White Background</span>
+        </div>
+        <div class="logo-cell logo-bg-coral">
+          <img src="./v5/d-mark-white.svg" alt="D mark white on coral" style="height:56px;" />
+          <span class="logo-label">Coral Background</span>
+        </div>
+      </div>
+
+      <h3>Clear Space</h3>
+      <p style="font-size:14px;color:var(--warm-gray);margin-bottom:20px;line-height:1.7;">Maintain clear space equal to the height of the "D" in the wordmark on all sides. Never place the logo closer than this to any edge or other element.</p>
+      <div class="clearspace-box">
+        <div class="clearspace-inner">
+          <span class="clearspace-label top">1× D-height</span>
+          <span class="clearspace-label bottom">1× D-height</span>
+          <span class="clearspace-label left">1×</span>
+          <span class="clearspace-label right">1×</span>
+          <img src="./v5/wordmark-transparent.svg" alt="wordmark clearspace" />
+        </div>
+      </div>
+
+      <h3>Sizing — In Product</h3>
+      <div class="logo-rule">
+        <div class="rule-icon">🔝</div>
+        <div class="rule-text">
+          <strong>Navbar / Console header</strong>
+          Use <code style="font-family:monospace;background:var(--cream-dark);padding:1px 5px;border-radius:3px;font-size:12px;">wordmark-transparent.svg</code> at <strong>48px height</strong> (h-12 in Tailwind). This ratio mirrors the miromind.ai reference (~2:1 logo-to-nav).
+        </div>
+      </div>
+      <div class="logo-rule">
+        <div class="rule-icon">🔽</div>
+        <div class="rule-text">
+          <strong>Footer</strong>
+          Use <code style="font-family:monospace;background:var(--cream-dark);padding:1px 5px;border-radius:3px;font-size:12px;">wordmark-transparent.svg</code> at <strong>28px height</strong> (h-7).
+        </div>
+      </div>
+      <div class="logo-rule">
+        <div class="rule-icon">📱</div>
+        <div class="rule-text">
+          <strong>Favicons</strong>
+          Use D mark in 5 sizes: 512px (OG), 192px (Android), 180px (Apple Touch), 32px, 16px. All in <code style="font-family:monospace;background:var(--cream-dark);padding:1px 5px;border-radius:3px;font-size:12px;">v5/favicon-*.png</code>.
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ════ COLORS ════ -->
+    <section class="section" id="colors">
+      <div class="section-header">
+        <div class="section-eyebrow">03 — Color</div>
+        <h2 class="section-title">Color Palette</h2>
+        <p class="section-desc">A four-color primary system built on warmth and contrast. Coral is the brand voice. Navy is the authority. Cream is the atmosphere.</p>
+      </div>
+
+      <h3>Primary Palette</h3>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#E8735A;" data-hex="#E8735A"></div>
+          <div class="color-info">
+            <div class="color-name">Coral</div>
+            <div class="color-role">Primary brand color. CTAs, accents, highlights, links.</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1B2B4B;" data-hex="#1B2B4B"></div>
+          <div class="color-info">
+            <div class="color-name">Navy</div>
+            <div class="color-role">Authority. Headings, dark UI, navigation, footers.</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FDFCFA;" data-hex="#FDFCFA"></div>
+          <div class="color-info">
+            <div class="color-name">Cream</div>
+            <div class="color-role">Page background. Warm, not cold. Never pure white.</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FFFFFF;border:1px solid #eee;" data-hex="#FFFFFF"></div>
+          <div class="color-info">
+            <div class="color-name">White</div>
+            <div class="color-role">Cards, overlays, modal backgrounds, inputs.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Extended Palette</h3>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#F5C4B8;" data-hex="#F5C4B8"></div>
+          <div class="color-info"><div class="color-name">Coral Light</div><div class="color-role">Borders, subtle tints on coral elements.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#C85A42;" data-hex="#C85A42"></div>
+          <div class="color-info"><div class="color-name">Coral Dark</div><div class="color-role">Hover states on coral buttons.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FEF3EF;" data-hex="#FEF3EF"></div>
+          <div class="color-info"><div class="color-name">Coral Tint</div><div class="color-role">Badge backgrounds, section highlights.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#2E4170;" data-hex="#2E4170"></div>
+          <div class="color-info"><div class="color-name">Navy Mid</div><div class="color-role">Secondary nav, hover states on navy.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#F5F3EF;" data-hex="#F5F3EF"></div>
+          <div class="color-info"><div class="color-name">Cream Dark</div><div class="color-role">Table headers, secondary backgrounds.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#888580;" data-hex="#888580"></div>
+          <div class="color-info"><div class="color-name">Warm Gray</div><div class="color-role">Body text, captions, secondary labels.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#E8E6E1;" data-hex="#E8E6E1"></div>
+          <div class="color-info"><div class="color-name">Border</div><div class="color-role">Card borders, dividers, input strokes.</div></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#C4C2BE;" data-hex="#C4C2BE"></div>
+          <div class="color-info"><div class="color-name">Gray Light</div><div class="color-role">Placeholder text, disabled states.</div></div>
+        </div>
+      </div>
+
+      <h3>Usage Reference</h3>
+      <table class="color-usage-table">
+        <thead>
+          <tr><th>Element</th><th>Color Token</th><th>Hex</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Page background</strong></td><td>Cream</td><td><code style="font-family:monospace;font-size:12px;">#FDFCFA</code></td></tr>
+          <tr><td><strong>H1, H2, H3 headings</strong></td><td>Navy</td><td><code style="font-family:monospace;font-size:12px;">#1B2B4B</code></td></tr>
+          <tr><td><strong>Body text</strong></td><td>Navy</td><td><code style="font-family:monospace;font-size:12px;">#1B2B4B</code></td></tr>
+          <tr><td><strong>Secondary text / captions</strong></td><td>Warm Gray</td><td><code style="font-family:monospace;font-size:12px;">#888580</code></td></tr>
+          <tr><td><strong>Primary CTA button</strong></td><td>Coral</td><td><code style="font-family:monospace;font-size:12px;">#E8735A</code></td></tr>
+          <tr><td><strong>CTA button hover</strong></td><td>Coral Dark</td><td><code style="font-family:monospace;font-size:12px;">#C85A42</code></td></tr>
+          <tr><td><strong>Navigation / footer</strong></td><td>Navy</td><td><code style="font-family:monospace;font-size:12px;">#1B2B4B</code></td></tr>
+          <tr><td><strong>Card background</strong></td><td>White</td><td><code style="font-family:monospace;font-size:12px;">#FFFFFF</code></td></tr>
+          <tr><td><strong>Card border</strong></td><td>Border</td><td><code style="font-family:monospace;font-size:12px;">#E8E6E1</code></td></tr>
+          <tr><td><strong>Input border</strong></td><td>Border</td><td><code style="font-family:monospace;font-size:12px;">#E8E6E1</code></td></tr>
+          <tr><td><strong>Input focus ring</strong></td><td>Coral at 12% opacity</td><td><code style="font-family:monospace;font-size:12px;">rgba(232,115,90,0.12)</code></td></tr>
+          <tr><td><strong>Section label / badge</strong></td><td>Coral + Coral Tint</td><td><code style="font-family:monospace;font-size:12px;">#E8735A / #FEF3EF</code></td></tr>
+          <tr><td><strong>Dividers</strong></td><td>Border</td><td><code style="font-family:monospace;font-size:12px;">#E8E6E1</code></td></tr>
+          <tr><td><strong>Table headers</strong></td><td>Cream Dark</td><td><code style="font-family:monospace;font-size:12px;">#F5F3EF</code></td></tr>
+          <tr><td><strong>Selection highlight</strong></td><td>Coral at 20% opacity</td><td><code style="font-family:monospace;font-size:12px;">rgba(232,115,90,0.20)</code></td></tr>
+        </tbody>
+      </table>
+
+      <h3>CSS Custom Properties</h3>
+      <div style="background:#1B2B4B;border-radius:var(--radius-lg);padding:24px 28px;margin-top:4px;">
+        <pre style="font-family:'Inter',monospace;font-size:12px;color:rgba(255,255,255,0.8);line-height:1.8;overflow-x:auto;"><code><span style="color:#F5C4B8;">/* index.css — Dormy custom colors */</span>
+<span style="color:#E8735A;">--coral:</span>       <span style="color:#98D4C8;">oklch(0.65 0.18 30)</span>;   <span style="color:#888;">/* #E8735A */</span>
+<span style="color:#E8735A;">--coral-light:</span> <span style="color:#98D4C8;">oklch(0.75 0.14 30)</span>;   <span style="color:#888;">/* #F5C4B8 */</span>
+<span style="color:#E8735A;">--coral-dark:</span>  <span style="color:#98D4C8;">oklch(0.55 0.20 30)</span>;   <span style="color:#888;">/* #C85A42 */</span>
+<span style="color:#A8C0E8;">--navy:</span>        <span style="color:#98D4C8;">oklch(0.25 0.04 260)</span>;  <span style="color:#888;">/* #1B2B4B */</span>
+<span style="color:#A8C0E8;">--navy-light:</span>  <span style="color:#98D4C8;">oklch(0.35 0.04 260)</span>;  <span style="color:#888;">/* #2E4170 */</span>
+<span style="color:#F5E8A0;">--cream:</span>       <span style="color:#98D4C8;">oklch(0.98 0.01 80)</span>;   <span style="color:#888;">/* #FDFCFA */</span>
+<span style="color:#F5E8A0;">--cream-dark:</span>  <span style="color:#98D4C8;">oklch(0.95 0.015 80)</span>;  <span style="color:#888;">/* #F5F3EF */</span>
+<span style="color:#C4C2BE;">--warm-gray:</span>   <span style="color:#98D4C8;">oklch(0.55 0.01 80)</span>;   <span style="color:#888;">/* #888580 */</span></code></pre>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ════ TYPOGRAPHY ════ -->
+    <section class="section" id="typography">
+      <div class="section-header">
+        <div class="section-eyebrow">04 — Type</div>
+        <h2 class="section-title">Typography</h2>
+        <p class="section-desc">Three typefaces serve three distinct roles. DM Serif Display sets editorial authority. DM Sans keeps body copy clean and approachable. Outfit is reserved for the logo and brand wordmark.</p>
+      </div>
+
+      <!-- DM Serif Display -->
+      <div class="font-showcase">
+        <div class="font-header">
+          <div class="font-header-name">DM Serif Display</div>
+          <div class="font-header-meta">
+            <span class="font-badge badge-serif">Serif</span>
+            <span class="font-badge badge-sans" style="background:#FFF8E6;color:#B45309;">Headings</span>
+          </div>
+        </div>
+        <div class="font-body">
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Display</div>
+              <div class="type-spec">58–68px · 400<br>tracking: −1px<br>leading: 1.08</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Serif Display',serif;font-size:52px;color:var(--navy);line-height:1.08;letter-spacing:-1px;display:block;">Focus on building.</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">H1</div>
+              <div class="type-spec">40–52px · 400<br>tracking: −0.5px<br>leading: 1.12</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Serif Display',serif;font-size:42px;color:var(--navy);line-height:1.12;letter-spacing:-0.5px;display:block;">The Founder's Paradox</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">H2</div>
+              <div class="type-spec">28–36px · 400<br>tracking: −0.3px<br>leading: 1.2</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Serif Display',serif;font-size:32px;color:var(--navy);line-height:1.2;letter-spacing:-0.3px;display:block;">Color Palette</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">H3</div>
+              <div class="type-spec">20–24px · 400<br>leading: 1.3</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);line-height:1.3;display:block;">Design Philosophy</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Italic</div>
+              <div class="type-spec">Used for accent<br>phrases and quotes</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Serif Display',serif;font-size:36px;color:var(--coral);font-style:italic;line-height:1.2;display:block;">We handle the growth and capital.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DM Sans -->
+      <div class="font-showcase">
+        <div class="font-header">
+          <div class="font-header-name">DM Sans</div>
+          <div class="font-header-meta">
+            <span class="font-badge badge-sans">Sans-serif</span>
+            <span class="font-badge badge-sans" style="background:#F0F4FF;color:#3B5BDB;">Body & UI</span>
+          </div>
+        </div>
+        <div class="font-body">
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Body Large</div>
+              <div class="type-spec">18–20px · 400<br>leading: 1.7–1.8</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Sans',sans-serif;font-size:18px;color:rgba(27,43,75,0.65);line-height:1.75;display:block;">We're your AI partner built into your stack — built for super founders & solo entrepreneurs who mean business.</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Body</div>
+              <div class="type-spec">15–16px · 400<br>leading: 1.7</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Sans',sans-serif;font-size:15px;color:#555;line-height:1.7;display:block;">Dormy combines a curated human network with AI-powered execution — delivering warm introductions and personalized outreach in Slack or Telegram.</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">UI / Label</div>
+              <div class="type-spec">13–14px · 500–600<br>leading: 1.5</div>
+            </div>
+            <div class="type-sample" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+              <span style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--navy);">Button Text</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--warm-gray);">Secondary Label</span>
+              <span class="section-label-component">Section Label</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Caption / Meta</div>
+              <div class="type-spec">11–12px · 600<br>letter-spacing: 1.5–2px<br>UPPERCASE</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--coral);">03 — Color</span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Weights</div>
+              <div class="type-spec">300 · 400 · 500 · 600</div>
+            </div>
+            <div class="type-sample" style="display:flex;flex-direction:column;gap:4px;">
+              <span style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:var(--navy);">Light 300 — rarely used, long-form text</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:400;color:var(--navy);">Regular 400 — body text default</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:var(--navy);">Medium 500 — UI labels, sub-headings</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--navy);">SemiBold 600 — buttons, nav, emphasis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outfit -->
+      <div class="font-showcase">
+        <div class="font-header">
+          <div class="font-header-name">Outfit</div>
+          <div class="font-header-meta">
+            <span class="font-badge badge-brand">Brand Only</span>
+          </div>
+        </div>
+        <div class="font-body">
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Logo / Wordmark</div>
+              <div class="type-spec">800 weight<br>letter-spacing: −0.5px</div>
+            </div>
+            <div class="type-sample">
+              <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:38px;color:var(--navy);letter-spacing:-0.5px;">Dormy<span style="color:var(--coral);">.</span></span>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">
+              <div class="type-label">Console UI</div>
+              <div class="type-spec">Used in console<br>headers + section nums</div>
+            </div>
+            <div class="type-sample" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+              <span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;color:var(--navy);">Dashboard</span>
+              <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:13px;color:var(--coral);background:var(--coral-bg);border:1px solid var(--coral-light);padding:4px 10px;border-radius:6px;">03</span>
+            </div>
+          </div>
+          <p style="font-size:13px;color:var(--warm-gray);margin-top:16px;line-height:1.6;">⚠ Outfit should only be used for the logo wordmark and brand-specific console UI elements. Use DM Sans for all other product copy.</p>
+        </div>
+      </div>
+
+      <h3>Font Loading (Google Fonts)</h3>
+      <div style="background:#1B2B4B;border-radius:var(--radius-lg);padding:20px 24px;">
+        <pre style="font-family:'Inter',monospace;font-size:12px;color:rgba(255,255,255,0.8);line-height:1.8;overflow-x:auto;"><code><span style="color:#F5C4B8;">/* Google Fonts import — include in &lt;head&gt; */</span>
+<span style="color:#98D4C8;">https://fonts.googleapis.com/css2?family=</span>
+<span style="color:#E8D87A;">  DM+Serif+Display:ital@0;1</span>
+<span style="color:#E8D87A;">  &family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;</span>
+<span style="color:#E8D87A;">  0,9..40,500;0,9..40,600;1,9..40,400</span>
+<span style="color:#E8D87A;">  &family=Outfit:wght@700;800</span>
+<span style="color:#A8C0E8;">  &display=swap</span></code></pre>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ════ SPACING ════ -->
+    <section class="section" id="spacing">
+      <div class="section-header">
+        <div class="section-eyebrow">05 — Layout</div>
+        <h2 class="section-title">Spacing & Layout</h2>
+        <p class="section-desc">Dormy uses a base-4 spacing scale. Generous whitespace is intentional — it communicates confidence and editorial quality, not emptiness.</p>
+      </div>
+
+      <h3>Spacing Scale</h3>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-sm);margin-bottom:24px;">
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:4px;"></div></div><div class="spacing-info"><code>1px</code> <span class="sp-name">Hairline</span> <span class="sp-px">— dividers, borders</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:8px;"></div></div><div class="spacing-info"><code>2px / 0.5rem</code> <span class="sp-name">xs</span> <span class="sp-px">— icon gap, tight inline spacing</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:16px;"></div></div><div class="spacing-info"><code>4px / 1rem</code> <span class="sp-name">sm</span> <span class="sp-px">— badge padding, small gaps</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:24px;"></div></div><div class="spacing-info"><code>6px / 1.5rem</code> <span class="sp-name">—</span> <span class="sp-px">— button padding (vertical)</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:32px;"></div></div><div class="spacing-info"><code>8px / 2rem</code> <span class="sp-name">md</span> <span class="sp-px">— card padding, input padding</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:48px;"></div></div><div class="spacing-info"><code>12px / 3rem</code> <span class="sp-name">—</span> <span class="sp-px">— grid gap, list spacing</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:64px;"></div></div><div class="spacing-info"><code>16px / 4rem</code> <span class="sp-name">lg</span> <span class="sp-px">— card padding, section padding</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:96px;"></div></div><div class="spacing-info"><code>24px / 6rem</code> <span class="sp-name">xl</span> <span class="sp-px">— content padding, inset sections</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:128px;"></div></div><div class="spacing-info"><code>32px / 8rem</code> <span class="sp-name">2xl</span> <span class="sp-px">— section gaps, hero padding</span></div></div>
+        <div class="spacing-row"><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:160px;"></div></div><div class="spacing-info"><code>48px+</code> <span class="sp-name">Hero</span> <span class="sp-px">— hero section vertical padding (80px typical)</span></div></div>
+      </div>
+
+      <h3>Border Radius</h3>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-sm);display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;margin-bottom:24px;">
+        <div style="text-align:center;">
+          <div style="width:40px;height:40px;background:var(--coral);border-radius:4px;margin:0 auto 8px;"></div>
+          <div style="font-size:11px;font-weight:600;color:var(--navy);">4px</div>
+          <div style="font-size:10px;color:var(--warm-gray);">Tags, code</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:56px;height:40px;background:var(--coral);border-radius:8px;margin:0 auto 8px;"></div>
+          <div style="font-size:11px;font-weight:600;color:var(--navy);">8px</div>
+          <div style="font-size:10px;color:var(--warm-gray);">Buttons, inputs</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:80px;height:48px;background:var(--coral);border-radius:12px;margin:0 auto 8px;"></div>
+          <div style="font-size:11px;font-weight:600;color:var(--navy);">12px</div>
+          <div style="font-size:10px;color:var(--warm-gray);">Cards, panels</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:80px;height:48px;background:var(--coral);border-radius:16px;margin:0 auto 8px;"></div>
+          <div style="font-size:11px;font-weight:600;color:var(--navy);">16px</div>
+          <div style="font-size:10px;color:var(--warm-gray);">Modals, sections</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:80px;height:32px;background:var(--coral);border-radius:999px;margin:0 auto 8px;"></div>
+          <div style="font-size:11px;font-weight:600;color:var(--navy);">Full / Pill</div>
+          <div style="font-size:10px;color:var(--warm-gray);">Badges, tags</div>
+        </div>
+      </div>
+
+      <h3>Container & Grid</h3>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-sm);">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead><tr style="border-bottom:1px solid var(--border);">
+            <th style="text-align:left;padding:8px 12px;color:var(--navy);font-size:11px;letter-spacing:1px;text-transform:uppercase;">Breakpoint</th>
+            <th style="text-align:left;padding:8px 12px;color:var(--navy);font-size:11px;letter-spacing:1px;text-transform:uppercase;">Container Padding</th>
+            <th style="text-align:left;padding:8px 12px;color:var(--navy);font-size:11px;letter-spacing:1px;text-transform:uppercase;">Max Width</th>
+          </tr></thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 12px;color:#555;">Mobile (&lt; 640px)</td><td style="padding:10px 12px;font-family:monospace;font-size:12px;color:var(--coral);">1rem (16px)</td><td style="padding:10px 12px;color:#555;">100%</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 12px;color:#555;">Tablet (640px+)</td><td style="padding:10px 12px;font-family:monospace;font-size:12px;color:var(--coral);">1.5rem (24px)</td><td style="padding:10px 12px;color:#555;">100%</td></tr>
+            <tr><td style="padding:10px 12px;color:#555;">Desktop (1024px+)</td><td style="padding:10px 12px;font-family:monospace;font-size:12px;color:var(--coral);">2rem (32px)</td><td style="padding:10px 12px;color:#555;"><strong>1200px</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ════ COMPONENTS ════ -->
+    <section class="section" id="components">
+      <div class="section-header">
+        <div class="section-eyebrow">06 — Components</div>
+        <h2 class="section-title">UI Components</h2>
+        <p class="section-desc">Live component examples with the actual brand styles applied. Each component is shown in all relevant states.</p>
+      </div>
+
+      <!-- Buttons -->
+      <h3>Buttons</h3>
+      <div class="component-box">
+        <div class="component-header">Button Variants</div>
+        <div class="component-preview">
+          <button class="btn btn-primary">Get Started →</button>
+          <button class="btn btn-secondary">Learn More</button>
+          <button class="btn btn-outline">View Docs</button>
+          <button class="btn btn-ghost">Cancel</button>
+        </div>
+      </div>
+      <div class="component-box">
+        <div class="component-header">Button Sizes</div>
+        <div class="component-preview" style="align-items:center;">
+          <button class="btn btn-primary btn-sm">Small</button>
+          <button class="btn btn-primary">Default</button>
+          <button class="btn btn-primary btn-lg">Large</button>
+        </div>
+      </div>
+      <div class="component-box">
+        <div class="component-header">On Dark Background</div>
+        <div class="component-preview dark">
+          <button class="btn btn-primary">Join Waitlist →</button>
+          <button class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.2);">Learn More</button>
+          <button class="btn btn-ghost" style="color:rgba(255,255,255,0.55);">Sign In</button>
+        </div>
+      </div>
+
+      <!-- Badges -->
+      <h3>Badges & Labels</h3>
+      <div class="component-box">
+        <div class="component-header">Badge Variants</div>
+        <div class="component-preview">
+          <span class="badge badge-coral">✦ New</span>
+          <span class="badge badge-navy">Internal</span>
+          <span class="badge badge-green">✓ Active</span>
+          <span class="badge badge-amber">⏳ Pending</span>
+          <span class="section-label-component">Section Label</span>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <h3>Cards</h3>
+      <div class="component-box">
+        <div class="component-header">Card Example</div>
+        <div class="component-preview grid">
+          <div class="example-card">
+            <div class="example-card-title">GTM Strategy</div>
+            <div class="example-card-body">Dormy monitors what's working for similar-stage companies and surfaces the tactics most relevant to your context.</div>
+          </div>
+          <div class="example-card" style="border-top: 3px solid var(--coral);">
+            <div class="example-card-title">Investor Research</div>
+            <div class="example-card-body">From company URL to ranked investor list with personalized emails referencing their portfolio. Under 5 minutes.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inputs -->
+      <h3>Form Inputs</h3>
+      <div class="component-box">
+        <div class="component-header">Input States</div>
+        <div class="component-preview" style="flex-direction:column;align-items:stretch;gap:12px;max-width:480px;">
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--navy);margin-bottom:6px;">Email Address</div>
+            <input class="example-input" type="email" placeholder="you@company.com" />
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--navy);margin-bottom:6px;">Focused (click to see)</div>
+            <input class="example-input" type="text" value="Super founder building..." />
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--warm-gray);margin-bottom:6px;">Disabled</div>
+            <input class="example-input" type="text" value="Disabled state" disabled style="opacity:0.5;cursor:not-allowed;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Shadows -->
+      <h3>Elevation (Shadows)</h3>
+      <div style="background:var(--cream-dark);border-radius:var(--radius-lg);padding:28px;display:flex;gap:20px;flex-wrap:wrap;margin-bottom:0;">
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-sm);flex:1;min-width:120px;text-align:center;">
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;">Shadow SM</div>
+          <div style="font-size:11px;color:var(--warm-gray);">Cards, inputs</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow);flex:1;min-width:120px;text-align:center;">
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;">Shadow</div>
+          <div style="font-size:11px;color:var(--warm-gray);">Hover states, dropdowns</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-lg);flex:1;min-width:120px;text-align:center;">
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;">Shadow LG</div>
+          <div style="font-size:11px;color:var(--warm-gray);">Modals, floating panels</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ════ DO / DON'T ════ -->
+    <section class="section" id="do-dont">
+      <div class="section-header">
+        <div class="section-eyebrow">07 — Rules</div>
+        <h2 class="section-title">Do's & Don'ts</h2>
+        <p class="section-desc">Common mistakes and their corrections. These rules protect the brand from dilution and keep the visual system coherent.</p>
+      </div>
+
+      <h3>Color</h3>
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <div class="do-header">✓ Do</div>
+          <div class="do-body"><ul>
+            <li>Use Cream (#FDFCFA) as the page background — not pure white</li>
+            <li>Use Coral sparingly for CTA buttons, accents, and key highlights</li>
+            <li>Pair navy text on cream/white backgrounds for body copy</li>
+            <li>Use Warm Gray (#888580) for secondary and caption text</li>
+            <li>Use the border color (#E8E6E1) for all dividers and card borders</li>
+          </ul></div>
+        </div>
+        <div class="dont-card">
+          <div class="dont-header">✗ Don't</div>
+          <div class="dont-body"><ul>
+            <li>Don't use pure white (#FFFFFF) as a page background</li>
+            <li>Don't use Coral for large background fills — it's an accent, not a canvas</li>
+            <li>Don't use generic blue for links — use Coral or Navy</li>
+            <li>Don't mix in off-brand accent colors (purple, green, etc.) without approval</li>
+            <li>Don't use black (#000000) — use Navy for maximum contrast</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <h3>Typography</h3>
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <div class="do-header">✓ Do</div>
+          <div class="do-body"><ul>
+            <li>Use DM Serif Display for all H1, H2, H3 headings</li>
+            <li>Use italic DM Serif Display for accent phrases in hero copy</li>
+            <li>Use DM Sans at 600 weight for buttons, nav, and UI labels</li>
+            <li>Use generous letter-spacing (2px) for ALL-CAPS labels and eyebrows</li>
+            <li>Maintain hierarchy: Display → H1 → H2 → Body → Caption</li>
+          </ul></div>
+        </div>
+        <div class="dont-card">
+          <div class="dont-header">✗ Don't</div>
+          <div class="dont-body"><ul>
+            <li>Don't use Outfit for body text or UI copy — brand/logo only</li>
+            <li>Don't use bold (700+) weight in DM Serif Display</li>
+            <li>Don't use ALL CAPS for body text — only micro labels</li>
+            <li>Don't mix DM Serif Display and DM Sans in the same heading</li>
+            <li>Don't go below 11px for any visible text</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <h3>Logo</h3>
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <div class="do-header">✓ Do</div>
+          <div class="do-body"><ul>
+            <li>Use the SVG version whenever possible (scalable, sharper)</li>
+            <li>Match the logo variant to the background color</li>
+            <li>Maintain clear space of at least 1× D-height on all sides</li>
+            <li>Use the wordmark as the primary identifier (not just the D mark)</li>
+            <li>Use the D mark only for favicons, app icons, and small-format uses</li>
+          </ul></div>
+        </div>
+        <div class="dont-card">
+          <div class="dont-header">✗ Don't</div>
+          <div class="dont-body"><ul>
+            <li>Don't stretch, skew, or rotate the logo</li>
+            <li>Don't place the logo on busy or low-contrast backgrounds</li>
+            <li>Don't recreate the wordmark using Outfit text — always use the SVG file</li>
+            <li>Don't add drop shadows or effects to the logo</li>
+            <li>Don't use logos from archive/ — v5 only</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <h3>Voice & Copy</h3>
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <div class="do-header">✓ Do</div>
+          <div class="do-body"><ul>
+            <li>Write in first person plural ("we") — Dormy is a partner, not a product</li>
+            <li>Lead with specific outcomes, not features</li>
+            <li>Acknowledge that fundraising and GTM are genuinely hard</li>
+            <li>Use concrete numbers and specifics when available</li>
+            <li>End CTAs with directional signals ("→", "Get Started →")</li>
+          </ul></div>
+        </div>
+        <div class="dont-card">
+          <div class="dont-header">✗ Don't</div>
+          <div class="dont-body"><ul>
+            <li>Don't lead with "AI-powered" — it's table stakes, not a differentiator</li>
+            <li>Don't use "unlock," "supercharge," or "10x"</li>
+            <li>Don't write in third person ("Dormy helps you...") — use "We"</li>
+            <li>Don't use all-caps headlines in body copy</li>
+            <li>Don't over-explain — respect the founder's intelligence</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-logo">Dormy<span>.</span></div>
+  <div class="footer-text">Brand Guidelines v5 · March 2026 · Internal Use Only<br>Questions? Update the guide in <code style="font-family:monospace;font-size:11px;">brand/brand-guide.html</code></div>
+</footer>
+
+</body>
+</html>

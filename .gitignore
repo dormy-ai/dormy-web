@@ -1,0 +1,32 @@
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Deps
+node_modules/
+.pnpm-store/
+
+# Env
+.env*.local
+.env
+
+# Logs
+*.log
+.pnpm-debug.log*
+npm-debug.log*
+
+# Testing
+coverage/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.pem
+.vercel
