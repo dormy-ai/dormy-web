@@ -30,3 +30,9 @@ Thumbs.db
 # Misc
 *.pem
 .vercel
+
+# TS incremental build cache
+tsconfig.tsbuildinfo
+
+# Local scratch / history
+History Copies/
