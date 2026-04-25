@@ -157,7 +157,7 @@ export default function HeroWithGlobe() {
           mapping, and proactive VC monitoring — so technical founders can stay
           in the zone.
         </p>
-        <button className="install-prompt" onClick={onCopy} type="button">
+        <button id="install" className="install-prompt" onClick={onCopy} type="button">
           <span className="install-prompt__dollar">$</span>
           <code className="install-prompt__code">{MCP_INSTALL}</code>
           <span className="install-prompt__copy">
@@ -166,9 +166,9 @@ export default function HeroWithGlobe() {
           </span>
         </button>
         <div className="hero__ctas">
-          <a href="/docs" className="btn btn--primary btn--lg">
+          <button onClick={onCopy} type="button" className="btn btn--primary btn--lg">
             Get Started Free <ArrowRight size={14} />
-          </a>
+          </button>
           <a
             href="https://github.com/dormy-ai/dormy-cli"
             target="_blank"

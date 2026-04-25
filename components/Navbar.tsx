@@ -7,8 +7,6 @@ import { ArrowRight, Menu, X } from "lucide-react";
 const navItems = [
   { href: "#how-it-works", label: "How it works" },
   { href: "#solution", label: "Solution" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/docs", label: "Docs" },
 ];
 
 export default function Navbar() {
@@ -46,13 +44,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/dashboard"
-            className="text-navy/70 hover:text-navy text-[15px] font-medium transition-colors"
-          >
-            Sign in
-          </Link>
-          <Link
-            href="/docs"
+            href="#install"
             className="inline-flex items-center gap-2 bg-coral text-white px-5 py-2.5 rounded-full text-[15px] font-medium hover:bg-coral-dark transition-colors"
           >
             Get Started Free
@@ -85,14 +77,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/dashboard"
-              onClick={() => setMobileOpen(false)}
-              className="text-navy/70 hover:text-navy text-base font-medium py-2"
-            >
-              Sign in
-            </Link>
-            <Link
-              href="/docs"
+              href="#install"
               onClick={() => setMobileOpen(false)}
               className="inline-flex items-center justify-center gap-2 bg-coral text-white px-5 py-3 rounded-full text-base font-medium"
             >

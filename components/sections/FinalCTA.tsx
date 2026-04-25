@@ -42,7 +42,7 @@ export default function FinalCTA() {
 
         <AnimatedSection delay={200}>
           <a
-            href="/docs"
+            href="#install"
             className="inline-flex items-center gap-2.5 bg-coral text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-coral-light transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-coral/30"
           >
             Get Started Free
