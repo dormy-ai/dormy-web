@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Copy, ArrowRight } from "lucide-react";
+import { Copy, ArrowRight, Send, Github } from "lucide-react";
 import { toast } from "sonner";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
@@ -170,11 +170,21 @@ export default function HeroWithGlobe() {
             Get Started Free <ArrowRight size={14} />
           </button>
           <a
+            href="https://t.me/dormy_dev01_bot"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn--navy btn--lg"
+          >
+            Launch on Telegram <Send size={14} />
+          </a>
+        </div>
+        <div className="hero__github">
+          <a
             href="https://github.com/dormy-ai/dormy-cli"
             target="_blank"
             rel="noreferrer"
-            className="btn btn--outline btn--lg"
           >
+            <Github size={14} />
             View on GitHub
           </a>
         </div>
