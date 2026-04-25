@@ -2,13 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 const navItems = [
-  { href: "/docs", label: "Docs" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/dashboard", label: "Dashboard" },
+  { href: "#how-it-works", label: "How it works" },
+  { href: "#solution", label: "Solution" },
 ];
 
 export default function Navbar() {
@@ -29,9 +27,9 @@ export default function Navbar() {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2" aria-label="Dormy home">
-          <img src="/wordmark-transparent.svg" alt="Dormy" className="h-8 w-auto" />
+      <div className="container flex items-center justify-between">
+        <Link href="/" className="flex items-center group" aria-label="Dormy home">
+          <img src="/wordmark-transparent.svg" alt="Dormy" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop */}
@@ -40,63 +38,51 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-foreground/80 transition hover:text-foreground"
+              className="text-navy/70 hover:text-navy text-[15px] font-medium transition-colors"
             >
               {item.label}
             </Link>
           ))}
-          <Button asChild size="sm" variant="outline">
-            <a
-              href="https://github.com/beizhangnina/dormy-ai"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </Button>
-          <Button asChild size="sm">
-            <Link href="/dashboard">Sign in</Link>
-          </Button>
+          <Link
+            href="#install"
+            className="inline-flex items-center gap-2 bg-coral text-white px-5 py-2.5 rounded-full text-[15px] font-medium hover:bg-coral-dark transition-colors"
+          >
+            Get Started Free
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden"
+          className="md:hidden text-navy"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="bg-background/95 border-t border-border/50 backdrop-blur-md md:hidden">
-          <div className="flex flex-col gap-3 px-4 py-4">
+        <div className="bg-background/95 border-t border-border/50 backdrop-blur-md md:hidden mt-2">
+          <div className="container py-6 flex flex-col gap-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-1 text-sm"
+                className="text-navy/70 hover:text-navy text-base font-medium py-2"
               >
                 {item.label}
               </Link>
             ))}
-            <a
-              href="https://github.com/beizhangnina/dormy-ai"
-              target="_blank"
-              rel="noreferrer"
-              className="py-1 text-sm"
-            >
-              GitHub
-            </a>
             <Link
-              href="/dashboard"
+              href="#install"
               onClick={() => setMobileOpen(false)}
-              className="py-1 text-sm font-medium"
+              className="inline-flex items-center justify-center gap-2 bg-coral text-white px-5 py-3 rounded-full text-base font-medium"
             >
-              Sign in
+              Get Started Free
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
