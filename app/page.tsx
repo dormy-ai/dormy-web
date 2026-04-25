@@ -6,6 +6,7 @@ import SolutionLayers from "@/components/sections/SolutionLayers";
 import HowItWorks from "@/components/sections/HowItWorks";
 import ResultQuote from "@/components/sections/ResultQuote";
 import TheTeam from "@/components/sections/TheTeam";
+import GetInTouch from "@/components/sections/GetInTouch";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
         <HowItWorks />
         <ResultQuote />
         <TheTeam />
+        <GetInTouch />
         <FinalCTA />
       </main>
       <Footer />

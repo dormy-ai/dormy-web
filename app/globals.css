@@ -185,6 +185,8 @@ html {
   border-color: var(--border);
 }
 .btn--outline:hover { border-color: var(--color-coral); color: var(--color-coral); }
+.btn--navy { background: var(--color-navy); color: #fff; }
+.btn--navy:hover { background: var(--color-navy-light); }
 
 /* ---------- Badges (design kit) ---------- */
 .badge {
@@ -260,6 +262,20 @@ html {
   margin-top: 24px;
   flex-wrap: wrap;
 }
+.hero__github {
+  margin-top: 18px;
+  text-align: center;
+}
+.hero__github a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(27, 43, 75, 0.55);
+  transition: color 150ms ease;
+}
+.hero__github a:hover { color: var(--color-coral); }
 
 /* ---------- Install prompt ---------- */
 .install-prompt {

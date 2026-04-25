@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Send } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export default function FinalCTA() {
@@ -41,13 +41,24 @@ export default function FinalCTA() {
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <a
-            href="#install"
-            className="inline-flex items-center gap-2.5 bg-coral text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-coral-light transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-coral/30"
-          >
-            Get Started Free
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a
+              href="#install"
+              className="inline-flex items-center gap-2.5 bg-coral text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-coral-light transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-coral/30"
+            >
+              Get Started Free
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="https://t.me/dormy_dev01_bot"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2.5 bg-transparent text-white border border-white/30 px-8 py-4 rounded-full text-base font-semibold hover:bg-white/10 hover:border-white/60 transition-all duration-200 hover:-translate-y-0.5"
+            >
+              Launch on Telegram
+              <Send className="w-4 h-4" />
+            </a>
+          </div>
         </AnimatedSection>
       </div>
     </section>
