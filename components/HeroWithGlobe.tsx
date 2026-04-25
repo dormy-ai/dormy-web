@@ -167,10 +167,10 @@ export default function HeroWithGlobe() {
         </button>
         <div className="hero__ctas">
           <a href="/docs" className="btn btn--primary btn--lg">
-            Get started <ArrowRight size={14} />
+            Get Started Free <ArrowRight size={14} />
           </a>
           <a
-            href="https://github.com/beizhangnina/dormy-ai"
+            href="https://github.com/dormy-ai/dormy-cli"
             target="_blank"
             rel="noreferrer"
             className="btn btn--outline btn--lg"
