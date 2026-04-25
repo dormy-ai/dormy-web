@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center group" aria-label="Dormy home">
-          <img src="/wordmark-transparent.svg" alt="Dormy" className="h-8 w-auto" />
+          <img src="/wordmark-transparent.svg" alt="Dormy" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop */}

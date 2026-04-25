@@ -337,7 +337,7 @@ html {
 
 /* ---------- Hero globe ---------- */
 .hero--globe { position: relative; overflow: hidden; }
-.hero.hero--globe { padding: 120px 24px 96px; }
+.hero.hero--globe { padding: 180px 24px 96px; }
 
 .hero-globe {
   position: absolute;

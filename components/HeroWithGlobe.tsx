@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Copy, Sparkles, ArrowRight } from "lucide-react";
+import { Copy, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
@@ -143,19 +143,19 @@ export default function HeroWithGlobe() {
       </div>
 
       <div className="hero__inner">
-        <span className="badge badge--outline hero__eyebrow">
-          <Sparkles size={12} />
-          MCP + CLI native — for Claude Code, Cursor, any agent
-        </span>
+        <div className="flex items-center justify-center gap-2.5 mb-5">
+          <div className="w-2 h-2 rounded-full bg-coral" />
+          <span className="text-xs font-semibold tracking-[0.15em] uppercase text-coral">
+            Your Relentless Teammate for Growth &amp; Capital
+          </span>
+        </div>
         <h1 className="hero__headline">
-          Your relentless teammate
-          <br />
-          for <em>fundraising</em>.
+          Focus on building.{" "}
+          <em>We handle the growth and capital.</em>
         </h1>
         <p className="hero__sub">
-          Dormy handles the heavy lifting of investor research, warm-intro
-          mapping, and proactive VC monitoring — so technical founders can stay
-          in the zone.
+          We&apos;re your AI partner built into your stack—built for super
+          founders &amp; solo entrepreneurs who mean business.
         </p>
         <button id="install" className="install-prompt" onClick={onCopy} type="button">
           <span className="install-prompt__dollar">$</span>
